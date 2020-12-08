@@ -32,7 +32,7 @@ function showurl(datajson){
 	var exceptionlength = exception.length;
 	var checklink = "";
 	var checkexception = "";	
-	var linktag = document.getElementsByTagName("a");
+	var linktag = document.getElementsByTagName("form");
 	var links =new Array();		
 
 	var semuaartikel = datajson.feed.openSearch$totalResults.$t;
