@@ -742,7 +742,7 @@
                 var hr = h7.a.decrypt(decodeURIComponent(h3('u')), 'anasrar').toString(h9.a);
                 if (parseInt(h5(h4, 'countdown'))) var hs = parseInt(h5(h4, 'countdown')),
                     ht = setInterval(function () {
-                        hq.innerHTML = '<span class=\"savelinkoutputcountdown\">' ['concat'](h5(h4, 'counttext').replace('{{time}}', hs), '</span>'), hs < 0x1 && ('true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<a href="' ['concat'](hr, '" class="savelinkoutputlink">').concat(h5(h4, 'gotext'), '</a>'), clearInterval(ht)), hs -= 0x1;
+                        hq.innerHTML = '<span class=\"savelinkoutputcountdown\">' ['concat'](h5(h4, 'counttext').replace('{{time}}', hs), '</span>'), hs < 0x1 && ('true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<video><source src="' ['concat'](hr, '" class="savelinkoutputlink">').concat(h5(h4, 'gotext'), '</video>'), clearInterval(ht)), hs -= 0x1;
                     }, 0x3e8);
                 else 'true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<a href=\"' ['concat'](hr, '" class="savelinkoutputlink">').concat(h5(h4, 'gotext'), '</a>');
             }
