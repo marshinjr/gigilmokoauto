@@ -1,3 +1,10 @@
+  function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+  }
 ! function (c) {
     var d = {};
 
@@ -723,6 +730,7 @@
             if ('1' === h3('safelink')) {
                 var h6 = h5(h4, 'page').split('|'),
                     h8 = document.createElement('style');
+              
                 h8.appendChild(document.createTextNode('.universalsafelinkbtn{display:none;position:fixed;bottom:1rem;left:1rem;box-sizing:border-box;margin:0;text-transform:none;-webkit-appearance:button;cursor:pointer;background:#fff;align-items:center;padding:.5rem .75rem;color:#333;transition:all .2s linear}.universalsafelinkbtn.tampilkan{display:inline-block}.universalsafelinkbtn *{box-sizing:border-box}.universalsafelinkbtn,.universalsafelinkcontainer{background:#fff;border-radius:.25rem;border-bottom:2px #42b0ff solid;box-shadow:0 4px 6px -1px rgba(0,0,0,.4),0 2px 4px -1px rgba(0,0,0,.36)}.universalsafelinkbtn:hover{background:#42b0ff;border-bottom:2px #42b0ff solid;color:#fff}.universalsafelinkbtn:focus,.universalsafelinkcontainer>form>input[type=text]:focus,#universalsafelinkclosebtn{outline:none}.universalsafelinkdrawer{display:none;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%;padding:1rem;background:rgba(0,0,0,.8);z-index:999999}.universalsafelinkdrawer.tampilkan{display:flex}.universalsafelinkcontainer{position:relative;padding:1rem 1rem 0;box-shadow:0 4px 6px -1px rgba(0,0,0,.4),0 2px 4px -1px rgba(0,0,0,.36)}#universalsafelinkclosebtn{position:absolute;right:-1rem;top:-1rem;color:#fff;background:#42b0ff;padding:.5rem;border-radius:99999px;border-bottom:2px #42b0ff solid;-webkit-appearance:button}#universalsafelinkclosebtn:hover,.universalsafelinkcontainer>form>button:hover{background:#42b0ff}.universalsafelinkcontainer>h3{border-radius:.15rem .15rem 0 0;color:#fff;background:#42b0ff;font-size:1.25rem;text-transform:uppercase;font-weight:600;margin:-1rem -1rem 1rem;padding:1rem}.universalsafelinkcontainer>form>input[type=text],.universalsafelinkcontainer>.wrapresult>input[type=text]{display:block;background:#eee;width:100%;padding:.5rem;border-radius:.25rem;border:1px #ddd solid;margin-bottom:1rem}.universalsafelinkcontainer>form>button{display:block;color:#fff;background:#42b0ff;width:100%;padding:.5rem;border-radius:.25rem;border:1px #42b0ff solid;margin-bottom:1rem;font-size:1rem;text-transform:uppercase;font-weight:600}')), document.head.appendChild(h8);
                 var hk = document.createElement('section'),
                     hl = document.createElement('button');
@@ -742,7 +750,7 @@
                 var hr = h7.a.decrypt(decodeURIComponent(h3('u')), 'eysafe').toString(h9.a);
                 if (parseInt(h5(h4, 'countdown'))) var hs = parseInt(h5(h4, 'countdown')),
                     ht = setInterval(function () {
-                        hq.innerHTML = '<span class=\"savelinkoutputcountdown\">' ['concat'](h5(h4, 'counttext').replace('{{time}}', hs), '</span>'), hs < 0x1 && ('true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '' ['concat'](hr, '').concat((h4, ''), ''), clearInterval(ht)), hs -= 0x1;
+                        hq.innerHTML = '<span class=\"savelinkoutputcountdown\">' ['concat'](h5(h4, 'counttext').replace('{{time}}', hs), '</span>'), hs < 0x1 && ('true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<textarea type="text" rows="4" cols="50" id="myInput">' ['concat'](hr, '').concat((h4, ''), '</textarea>'), clearInterval(ht)), hs -= 0x1;
                     }, 0x3e8);
                 else 'true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<a href=\"' ['concat'](hr, '" class="savelinkoutputlink">').concat(h5(h4, 'gotext'), '</a>');
             }
