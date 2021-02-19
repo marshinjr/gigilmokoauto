@@ -715,7 +715,7 @@
                 var h5 = new RegExp('[\\?&]' + h3 + '=([^&#]*)').exec(h4);
                 return null == h5 ? null : h5[0x1];
             },
-            h4 = document.querySelector('script#universalsafelink[data-copyright=anasrar][data-version]'),
+            h4 = document.querySelector('script#universalsafelink[data-copyright=eysafe.blogspot.com][data-version]'),
             h5 = function (h3, h4) {
                 return h3.getAttribute('data-' ['concat'](h4));
             };
@@ -728,7 +728,7 @@
                     hl = document.createElement('button');
                 hk.setAttribute('class', 'universalsafelinkdrawer'), hk.innerHTML = `<div class='universalsafelinkcontainer'><button id="universalsafelinkclosebtn"><svg style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24"><path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg></button><h3><svg style="width:1.5rem;height:1.5rem;display: inline" viewBox="0 0 24 24"><path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z" /></svg> Universal Safelink</h3><form><input type="text" name="url" placeholder="http or https" /><button type="submit">Convert</button></form><div class="wrapresult"><input type="text" name="result" /></div></div>`, hk.querySelector('form').addEventListener('submit', function (h3) {
                     if (h3.preventDefault(), h3.target.querySelector('[name=url]').value.length) {
-                        var h4 = h7.a.encrypt(h3.target.querySelector('[name=url]').value, 'anasrar').toString();
+                        var h4 = h7.a.encrypt(h3.target.querySelector('[name=url]').value, 'eysafe.blogspot.com').toString();
                         h3.target.parentNode.querySelector('[name=result]').value = '' ['concat']().concat(h6[~~(Math.random() * h6.length)], '?u=').concat(encodeURIComponent(h4));
                     }
                 }), hk.querySelector('#universalsafelinkclosebtn').addEventListener('click', function (h3) {
@@ -739,7 +739,7 @@
             }
             var hq = document.querySelector('#universalsafelinkoutput');
             if (h3('u') && hq) {
-                var hr = h7.a.decrypt(decodeURIComponent(h3('u')), 'anasrar').toString(h9.a);
+                var hr = h7.a.decrypt(decodeURIComponent(h3('u')), 'eysafe.blogspot.com').toString(h9.a);
                 if (parseInt(h5(h4, 'countdown'))) var hs = parseInt(h5(h4, 'countdown')),
                     ht = setInterval(function () {
                         hq.innerHTML = '<span class=\"savelinkoutputcountdown\">' ['concat'](h5(h4, 'counttext').replace('{{time}}', hs), '</span>'), hs < 0x1 && ('true' === h5(h4, 'autodirect') ? window.location = hr : hq.innerHTML = '<video><source src="' ['concat'](hr, '" class="savelinkoutputlink">').concat(h5(h4, 'gotext'), '</video>'), clearInterval(ht)), hs -= 0x1;
@@ -751,12 +751,12 @@
                     hv = h5(h4, 'page').split('|');
                 Array.prototype.forEach.call(document.querySelectorAll('a'), function (h3) {
                     if (h3.hostname.length && -0x1 === hu.indexOf(h3.hostname.toLowerCase())) {
-                        var h4 = h7.a.encrypt(h3.href, 'anasrar').toString();
+                        var h4 = h7.a.encrypt(h3.href, 'eysafe.blogspot.com').toString();
                         h3.href = '' ['concat']().concat(hv[~~(Math.random() * hv.length)], '?u=').concat(encodeURIComponent(h4));
                     }
                 });
             }
-        } else window.location = 'https://anasrar.github.io/blog/';
+        } else window.location = 'https://eysafe.blogspot.com/';
         h4.remove();
     });
 }]);
